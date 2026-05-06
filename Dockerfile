@@ -21,8 +21,9 @@ RUN pnpm install --no-frozen-lockfile
 # Copy source
 COPY . .
 
-# Generate Prisma client and build web
-RUN pnpm db:generate
+# Generate Prisma client inside packages/db (where @prisma/client is installed)
+ENV PRISMA_SKIP_POSTINSTALL_GENERATE=true
+RUN pnpm --filter @vp/db exec prisma generate --schema ../../prisma/schema.prisma
 RUN pnpm --filter @vp/web build
 
 EXPOSE 3000
@@ -30,4 +31,4 @@ ENV NODE_ENV=production
 ENV PORT=3000
 
 # At runtime: push schema, then start
-CMD ["sh", "-c", "pnpm db:push --skip-generate && pnpm --filter @vp/web start"]
+CMD ["sh", "-c", "pnpm --filter @vp/db exec prisma db push --schema ../../prisma/schema.prisma --skip-generate --accept-data-loss && pnpm --filter @vp/web start"]
