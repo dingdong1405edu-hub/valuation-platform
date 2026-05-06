@@ -1,0 +1,38 @@
+{
+  "name": "@vp/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --root ../.. --dir apps/worker",
+    "agent": "tsx src/cli/runAgent.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@vp/ai": "workspace:*",
+    "@vp/db": "workspace:*",
+    "@vp/shared": "workspace:*",
+    "bullmq": "^5.34.10",
+    "ioredis": "^5.4.2",
+    "mammoth": "^1.9.0",
+    "pdf-parse": "^1.1.1",
+    "puppeteer": "^23.10.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.15.0",
+    "tesseract.js": "^5.1.1",
+    "xlsx": "^0.18.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/pdf-parse": "^1.1.4",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

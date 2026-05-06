@@ -1,0 +1,176 @@
+// Prisma schema - Valuation Platform
+// SOURCE OF TRUTH — see CLAUDE.md §11
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  jobs      Job[]
+  documents Document[]
+  reports   Report[]
+}
+
+enum DocumentSourceType {
+  financial_statements
+  website
+  fanpage
+  catalogue_brochure
+  company_profile
+  business_plan
+  ceo_cv
+  crm
+  accounting_system
+  erp
+  manual_input
+  other
+}
+
+enum DocumentStatus {
+  uploaded
+  ingesting
+  ready
+  failed
+}
+
+model Document {
+  id            String             @id @default(cuid())
+  userId        String
+  user          User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  filename      String
+  storageKey    String
+  mimeType      String
+  bytes         Int
+  pages         Int?
+  sourceType    DocumentSourceType @default(other)
+  status        DocumentStatus     @default(uploaded)
+  ingestedJson  Json?
+  ocrApplied    Boolean            @default(false)
+  errorMsg      String?
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+  jobs          JobDocument[]
+
+  @@index([userId, createdAt])
+}
+
+enum JobStatus {
+  queued
+  running
+  done
+  failed
+  cancelled
+}
+
+model Job {
+  id            String        @id @default(cuid())
+  userId        String
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  status        JobStatus     @default(queued)
+  progress      Int           @default(0)
+  currentAgent  String?
+  companyMeta   Json
+  error         String?
+  documents     JobDocument[]
+  outputs       AgentOutput[]
+  reportId      String?       @unique
+  report        Report?       @relation(fields: [reportId], references: [id])
+  createdAt     DateTime      @default(now())
+  startedAt     DateTime?
+  finishedAt    DateTime?
+
+  @@index([userId, createdAt])
+  @@index([status])
+}
+
+model JobDocument {
+  jobId      String
+  documentId String
+  job        Job      @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  document   Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+
+  @@id([jobId, documentId])
+}
+
+enum AgentRunStatus {
+  queued
+  running
+  done
+  failed
+  skipped
+  cached
+}
+
+model AgentOutput {
+  id            String         @id @default(cuid())
+  jobId         String
+  job           Job            @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  agentName     String
+  agentVersion  String
+  inputHash     String
+  inputJson     Json
+  outputJson    Json?
+  modelUsed     String?
+  tokensIn      Int            @default(0)
+  tokensOut     Int            @default(0)
+  durationMs    Int            @default(0)
+  retries       Int            @default(0)
+  status        AgentRunStatus @default(queued)
+  errorMsg      String?
+  createdAt     DateTime       @default(now())
+
+  @@unique([jobId, agentName])
+  @@index([agentName, agentVersion, inputHash])
+}
+
+model Report {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  jobId           String   @unique
+  fullReportJson  Json
+  html            String   @db.Text
+  pdfStorageKey   String?
+  qualityScore    Int      @default(0)
+  createdAt       DateTime @default(now())
+  Job             Job?
+
+  @@index([userId, createdAt])
+}
+
+model Comparable {
+  id         String   @id @default(cuid())
+  ticker     String   @unique
+  name       String
+  country    String
+  industry   String
+  marketCap  Float?
+  evEbitda   Float?
+  pe         Float?
+  pb         Float?
+  sourceUrl  String?
+  updatedAt  DateTime @updatedAt
+
+  @@index([industry, country])
+}
+
+model SearchCache {
+  id          String   @id @default(cuid())
+  queryHash   String   @unique
+  payloadJson Json
+  expiresAt   DateTime
+  createdAt   DateTime @default(now())
+
+  @@index([expiresAt])
+}

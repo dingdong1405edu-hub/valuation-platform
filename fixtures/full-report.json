@@ -1,0 +1,336 @@
+{
+  "meta": {
+    "companyName": "Công ty CP Mẫu Demo",
+    "industry": "Bán lẻ thiết bị điện tử",
+    "reportDate": "2026-01-15T00:00:00.000Z",
+    "analystVersion": "0.1.0",
+    "currency": "VND",
+    "qualityScore": 65,
+    "disclaimers": []
+  },
+  "section1_executiveSummary": {
+    "companyName": "Công ty CP Mẫu Demo",
+    "industry": "Bán lẻ thiết bị điện tử",
+    "size": {
+      "revenueLatest": { "value": 150000000000, "unit": "VND", "source": "extracted", "confidence": "high", "note": "BCTC kiểm toán 2024" },
+      "ebitdaLatest": { "value": 18000000000, "unit": "VND", "source": "extracted", "confidence": "high", "note": "BCTC 2024" },
+      "netIncomeLatest": { "value": 12000000000, "unit": "VND", "source": "extracted", "confidence": "high", "note": "BCTC 2024" }
+    },
+    "valuationRange": { "low": 180000000000, "mid": 220000000000, "high": 260000000000, "currency": "VND" },
+    "recommendation": {
+      "fairValue": 220000000000,
+      "upsideDownsidePct": null,
+      "keyDrivers": [
+        { "label": "Tăng trưởng doanh thu 25% CAGR", "detail": "Mở rộng 15 cửa hàng mới giai đoạn 2025-2027" },
+        { "label": "Biên EBITDA cải thiện", "detail": "Từ 12% → 15% nhờ kinh tế quy mô" }
+      ],
+      "headline": "BUY — Định giá hấp dẫn so với peers"
+    },
+    "narrative": "Công ty CP Mẫu Demo là retailer thiết bị điện tử quy mô vừa với lịch sử tăng trưởng ổn định 20-25% mỗi năm. EBITDA margin 12% thấp hơn ngành 2pp nhưng có dư địa cải thiện. Định giá DCF + multiples cho khoảng 180-260 tỷ.",
+    "emittedAssumptions": []
+  },
+  "section2_investmentThesis": {
+    "thesisPoints": [
+      {
+        "title": "Mạng lưới 30 cửa hàng tăng trưởng kép 25%/năm",
+        "category": "growth",
+        "detail": "Doanh nghiệp đã mở mới 5 cửa hàng/năm trong 3 năm gần nhất, kế hoạch mở thêm 5 mỗi năm tới 2027.",
+        "evidence": ["Doanh thu 2022: 96 tỷ → 2024: 150 tỷ (CAGR 25%)", "Số lượng cửa hàng tăng từ 18 → 30"]
+      },
+      {
+        "title": "Lợi thế thương hiệu vùng",
+        "category": "competitive_advantage",
+        "detail": "Là chuỗi lớn thứ 2 tại miền Trung, gần đối thủ trên thị phần khoảng 18%.",
+        "evidence": ["Top-of-mind awareness 35% theo khảo sát người dùng 2024"]
+      },
+      {
+        "title": "Cải thiện biên EBITDA hướng tới 15%",
+        "category": "margin",
+        "detail": "Hiện 12%, peers 14-15%. Có dư địa tối ưu chuỗi cung ứng.",
+        "evidence": ["Inventory days giảm từ 75 → 62 ngày trong 2 năm"]
+      }
+    ],
+    "catalysts": [
+      { "title": "Mở 5 cửa hàng mới Q1-Q2/2026", "type": "market_expansion", "timing": "2026 H1", "expectedImpact": "Tăng thêm ~25 tỷ doanh thu năm đầu" }
+    ],
+    "risks": [
+      { "title": "Cạnh tranh từ chuỗi lớn", "category": "market", "severity": "high", "likelihood": "high", "description": "Đối thủ đang giảm giá để chiếm thị phần", "mitigation": "Tăng dịch vụ hậu mãi" }
+    ],
+    "narrative": "Luận điểm đầu tư xoay quanh tốc độ mở rộng mạng lưới, cải thiện biên lợi nhuận, và vị thế thương hiệu vùng. Rủi ro chính là cạnh tranh giá từ các chuỗi quốc gia.",
+    "emittedAssumptions": []
+  },
+  "section3_companyOverview": {
+    "history": "Thành lập 2015, khởi đầu 2 cửa hàng tại Đà Nẵng. Mở rộng dần và đạt 30 cửa hàng năm 2024.",
+    "shareholders": [
+      { "name": "Nguyễn Văn A (sáng lập)", "ownershipPct": 0.65, "type": "founder" },
+      { "name": "Quỹ ABC Capital", "ownershipPct": 0.25, "type": "institutional" }
+    ],
+    "businessModel": {
+      "productsServices": "Bán lẻ điện thoại, laptop, phụ kiện",
+      "revenueModel": "B2C qua chuỗi cửa hàng + ecommerce",
+      "unitEconomics": "AOV ~5tr, gross margin 18%, monthly contribution per store ~80tr"
+    },
+    "valueChain": {
+      "input": "Mua từ nhà phân phối chính hãng",
+      "production": "Bán lẻ + dịch vụ bảo hành",
+      "distribution": "30 cửa hàng vật lý + website",
+      "customer": "Cá nhân khu vực miền Trung, độ tuổi 18-45"
+    },
+    "emittedAssumptions": []
+  },
+  "section4_industry": {
+    "industryName": "Bán lẻ thiết bị điện tử",
+    "country": "VN",
+    "tam": { "value": 350000, "unit": "VND_billion", "source": "web", "confidence": "medium", "note": "BMI 2024", "webRef": { "url": "https://example.com/bmi", "accessedAt": "2026-01-15" } },
+    "sam": { "value": 50000, "unit": "VND_billion", "source": "web", "confidence": "medium", "note": "Miền Trung ~14% thị trường" },
+    "cagr": { "value": 0.085, "unit": "percent", "source": "web", "confidence": "medium", "note": "BMI 2025-2030" },
+    "trends": ["Online-offline tích hợp", "Trả góp 0% mở rộng", "Dịch vụ hậu mãi premium"],
+    "competitors": [
+      { "name": "Thế Giới Di Động", "marketSharePct": 0.45, "strengths": ["Quy mô", "Logistics"], "weaknesses": ["Biên thấp"] },
+      { "name": "FPT Shop", "marketSharePct": 0.18, "strengths": ["Tài chính"], "weaknesses": ["Phụ thuộc Apple"] }
+    ],
+    "narrative": "Ngành bán lẻ thiết bị điện tử Việt Nam đạt ~350 nghìn tỷ năm 2024, CAGR ~8.5%. Thị trường đang chuyển mạnh sang online-offline tích hợp.",
+    "emittedAssumptions": []
+  },
+  "section5_business": {
+    "fiscalYear": 2024,
+    "revenueBreakdown": {
+      "byProduct": [
+        { "label": "Điện thoại", "value": 90000000000, "pct": 0.6 },
+        { "label": "Laptop", "value": 36000000000, "pct": 0.24 },
+        { "label": "Phụ kiện", "value": 24000000000, "pct": 0.16 }
+      ],
+      "byChannel": [
+        { "label": "Cửa hàng", "value": 127500000000, "pct": 0.85 },
+        { "label": "Online", "value": 22500000000, "pct": 0.15 }
+      ],
+      "byRegion": [
+        { "label": "Miền Trung", "value": 120000000000, "pct": 0.8 },
+        { "label": "Miền Nam", "value": 30000000000, "pct": 0.2 }
+      ]
+    },
+    "drivers": {
+      "volume": "Tăng 18% YoY do mở mới cửa hàng",
+      "price": "Giá trung bình giảm nhẹ 2% do cạnh tranh",
+      "mix": "Dịch chuyển sang phụ kiện biên cao"
+    },
+    "margins": { "grossMargin": 0.18, "ebitdaMargin": 0.12 },
+    "narrative": "Doanh thu chủ yếu từ điện thoại (60%) và bán qua cửa hàng vật lý (85%).",
+    "emittedAssumptions": []
+  },
+  "section6_financials": {
+    "statement": {
+      "currency": "VND",
+      "unit": "billion",
+      "fiscalYears": [2022, 2023, 2024],
+      "incomeStatement": {
+        "revenue": [96, 120, 150],
+        "cogs": [78, 98, 123],
+        "grossProfit": [18, 22, 27],
+        "opex": [11, 13, 15],
+        "ebitda": [10, 14, 18],
+        "ebit": [7, 9, 12],
+        "interestExpense": [1, 1, 1.5],
+        "tax": [1.2, 1.6, 2.1],
+        "netIncome": [4.8, 6.4, 8.4]
+      },
+      "balanceSheet": {
+        "totalAssets": [80, 100, 130],
+        "currentAssets": [50, 65, 85],
+        "cash": [8, 12, 15],
+        "inventory": [25, 32, 40],
+        "receivables": [12, 16, 22],
+        "totalLiabilities": [40, 48, 60],
+        "currentLiabilities": [25, 30, 38],
+        "longTermDebt": [15, 18, 22],
+        "equity": [40, 52, 70]
+      },
+      "cashFlow": {
+        "cfo": [8, 11, 16],
+        "cfi": [-7, -9, -14],
+        "cff": [-1, -2, -2],
+        "capex": [6, 8, 12],
+        "fcf": [2, 3, 4]
+      },
+      "cellProvenance": {},
+      "assumptions": []
+    },
+    "highlights": [],
+    "narrative": "Doanh thu tăng trưởng kép 25%, EBITDA margin cải thiện từ 10% → 12%. Tài sản gia tăng phù hợp với mở rộng mạng lưới."
+  },
+  "section7_ratios": {
+    "fiscalYears": [2022, 2023, 2024],
+    "growth": { "revenueYoY": [0.25, 0.25], "revenueCagr": 0.25, "netIncomeYoY": [0.333, 0.313], "netIncomeCagr": 0.323 },
+    "profitability": {
+      "grossMargin": [0.187, 0.183, 0.18],
+      "ebitdaMargin": [0.104, 0.117, 0.12],
+      "netMargin": [0.05, 0.053, 0.056],
+      "roe": [0.12, 0.123, 0.12],
+      "roa": [0.06, 0.064, 0.065],
+      "roic": [0.115, 0.13, 0.14]
+    },
+    "leverage": {
+      "debtToEquity": [1.0, 0.92, 0.857],
+      "debtToEbitda": [1.5, 1.286, 1.222],
+      "interestCoverage": [7, 9, 8]
+    },
+    "liquidity": { "currentRatio": [2.0, 2.167, 2.237], "quickRatio": [1.0, 1.1, 1.184] },
+    "efficiency": {
+      "assetTurnover": [1.2, 1.2, 1.154],
+      "inventoryDays": [117, 119, 119],
+      "receivableDays": [46, 49, 54]
+    },
+    "assumptions": []
+  },
+  "section8_forecast": {
+    "currency": "VND",
+    "unit": "billion",
+    "basisYears": [2024],
+    "forecastYears": [
+      { "year": 2025, "revenue": 187, "cogs": 153, "opex": 19, "ebitda": 23, "ebit": 16, "tax": 3, "capex": 14, "workingCapitalChange": 2, "fcf": 7 },
+      { "year": 2026, "revenue": 230, "cogs": 188, "opex": 23, "ebitda": 30, "ebit": 21, "tax": 4, "capex": 16, "workingCapitalChange": 3, "fcf": 11 },
+      { "year": 2027, "revenue": 280, "cogs": 229, "opex": 28, "ebitda": 37, "ebit": 26, "tax": 5, "capex": 17, "workingCapitalChange": 3, "fcf": 16 },
+      { "year": 2028, "revenue": 322, "cogs": 263, "opex": 32, "ebitda": 43, "ebit": 31, "tax": 6, "capex": 18, "workingCapitalChange": 3, "fcf": 22 },
+      { "year": 2029, "revenue": 354, "cogs": 290, "opex": 35, "ebitda": 47, "ebit": 34, "tax": 7, "capex": 19, "workingCapitalChange": 2, "fcf": 26 }
+    ],
+    "drivers": {
+      "revenueGrowth": [0.25, 0.23, 0.22, 0.15, 0.10],
+      "grossMargin": [0.18, 0.18, 0.18, 0.18, 0.18],
+      "ebitdaMargin": [0.123, 0.130, 0.132, 0.135, 0.135],
+      "capexPctRevenue": [0.075, 0.07, 0.06, 0.056, 0.054],
+      "workingCapitalPctRevenue": [0.011, 0.013, 0.011, 0.009, 0.006]
+    },
+    "rationale": "Revenue growth giảm dần từ 25% → 10% phản ánh hội tụ về tăng trưởng ngành (8.5%). EBITDA margin cải thiện hướng tới 13.5% nhờ kinh tế quy mô. Capex giảm khi network bão hoà.",
+    "assumptions": []
+  },
+  "section9_valuation": {
+    "dcf": {
+      "assumptions": {
+        "wacc": { "value": 0.13, "unit": "percent", "source": "computed", "confidence": "medium", "note": "CAPM + WACC" },
+        "terminalGrowth": { "value": 0.03, "unit": "percent", "source": "assumed", "confidence": "high", "note": "Conservative ~ GDP VN" },
+        "forecastYears": 5,
+        "taxRate": { "value": 0.2, "unit": "percent", "source": "user_input", "confidence": "high", "note": "Tax rate VN" },
+        "waccComponents": {
+          "riskFreeRate": { "value": 0.045, "unit": "percent", "source": "web", "confidence": "high", "note": "VGB 10y Q4 2024" },
+          "beta": { "value": 1.1, "unit": "ratio", "source": "web", "confidence": "medium", "note": "Damodaran retail emerging" },
+          "marketRiskPremium": { "value": 0.085, "unit": "percent", "source": "web", "confidence": "medium", "note": "Damodaran VN" },
+          "costOfDebt": { "value": 0.09, "unit": "percent", "source": "assumed", "confidence": "medium", "note": "Industry typical" },
+          "taxRate": { "value": 0.2, "unit": "percent", "source": "user_input", "confidence": "high", "note": "VN" },
+          "debtRatio": { "value": 0.3, "unit": "ratio", "source": "extracted", "confidence": "high", "note": "BS 2024" }
+        }
+      },
+      "fcfForecast": [
+        { "year": 2025, "fcf": 7 },
+        { "year": 2026, "fcf": 11 },
+        { "year": 2027, "fcf": 16 },
+        { "year": 2028, "fcf": 22 },
+        { "year": 2029, "fcf": 26 }
+      ],
+      "pvFcf": [6.19, 8.61, 11.08, 13.49, 14.11],
+      "terminalValue": 268,
+      "pvTerminal": 145.5,
+      "enterpriseValue": 199,
+      "netDebt": { "value": 7, "unit": "VND_billion", "source": "computed", "confidence": "high", "note": "longTermDebt - cash" },
+      "equityValue": 192,
+      "fairValuePerShare": null,
+      "sharesOutstanding": null,
+      "currency": "VND",
+      "emittedAssumptions": [
+        { "id": "dcf-tg", "field": "section9.dcf.terminalGrowth", "value": 0.03, "unit": "percent", "basis": "GDP growth VN long-term", "reason": "Conservative anchor", "emittedBy": "valuationDcf", "affectsSection": [9, 10, 11] }
+      ]
+    },
+    "multiples": {
+      "comparables": [
+        { "ticker": "MWG", "name": "Mobile World", "country": "VN", "evEbitda": 12, "pe": 18, "pb": 3.2, "marketCap": null, "source": "seed" },
+        { "ticker": "DGW", "name": "Digiworld", "country": "VN", "evEbitda": 10.5, "pe": 15.5, "pb": 3.4, "marketCap": null, "source": "seed" },
+        { "ticker": "FRT", "name": "FPT Retail", "country": "VN", "evEbitda": 11, "pe": 20, "pb": 4.0, "marketCap": null, "source": "web" }
+      ],
+      "appliedMultiples": { "evEbitdaMedian": 11, "peMedian": 18, "pbMedian": 3.4, "evEbitdaP25": 10.5, "evEbitdaP75": 12 },
+      "targetMetrics": { "ebitda": 18, "netIncome": 8.4, "bookValue": 70 },
+      "impliedEquityValue": { "fromEvEbitda": 191, "fromPe": 151.2, "fromPb": 238 },
+      "netDebt": 7,
+      "currency": "VND",
+      "emittedAssumptions": []
+    },
+    "footballField": {
+      "methods": [
+        { "label": "DCF", "low": 163, "mid": 192, "high": 221 },
+        { "label": "EV/EBITDA", "low": 172, "mid": 191, "high": 210 },
+        { "label": "P/E", "low": 136, "mid": 151, "high": 166 },
+        { "label": "P/B", "low": 214, "mid": 238, "high": 262 }
+      ],
+      "finalRange": { "low": 163, "mid": 193, "high": 262 },
+      "currency": "VND"
+    },
+    "recommendedFairValue": {
+      "low": 180000000000,
+      "mid": 220000000000,
+      "high": 260000000000,
+      "methodWeights": { "DCF": 0.5, "EvEbitda": 0.25, "Pe": 0.15, "Pb": 0.1 },
+      "rationale": "Trọng số nghiêng về DCF (50%) phản ánh dự phóng dòng tiền đặc thù; multiples bổ sung neo theo thị trường."
+    }
+  },
+  "section10_sensitivity": {
+    "axisX": { "label": "WACC", "values": [0.11, 0.12, 0.13, 0.14, 0.15] },
+    "axisY": { "label": "Terminal Growth", "values": [0.01, 0.02, 0.03, 0.04, 0.05] },
+    "cells": [
+      [220, 200, 180, 162, 145],
+      [232, 211, 190, 171, 154],
+      [248, 224, 200, 180, 162],
+      [268, 240, 215, 192, 172],
+      [294, 260, 232, 207, 184]
+    ],
+    "centerCell": { "x": 2, "y": 2 },
+    "currency": "VND",
+    "metric": "equityValue"
+  },
+  "section11_recommendation": {
+    "fairValue": { "point": 220000000000, "low": 180000000000, "high": 260000000000, "currency": "VND", "perShare": null },
+    "upsideDownsidePct": null,
+    "entryPrice": 190000000000,
+    "dealStructure": "Vòng Series B 30 tỷ tại post-money 250 tỷ",
+    "conditions": [
+      "Hoàn thành kế hoạch mở 5 cửa hàng mới Q1-Q2/2026",
+      "EBITDA margin năm 2025 đạt tối thiểu 12.5%",
+      "Inventory days giảm về 110 ngày"
+    ],
+    "narrative": "Khuyến nghị MUA tại fair value 220 tỷ với khoảng giá vào 190 tỷ (đảm bảo biên an toàn ~14%). Cơ cấu deal gợi ý Series B 30 tỷ giúp tài trợ kế hoạch mở rộng giai đoạn 2026-2027.",
+    "emittedAssumptions": []
+  },
+  "section12_appendix": {
+    "inputManifest": {
+      "companyMeta": { "name": "Công ty CP Mẫu Demo", "industry": "Bán lẻ thiết bị điện tử", "country": "VN", "sizeHint": "medium" },
+      "provided": [
+        { "sourceType": "financial_statements", "documentIds": ["doc_1"], "notes": "BCTC kiểm toán 2022-2024" },
+        { "sourceType": "business_plan", "documentIds": ["doc_2"], "notes": "Kế hoạch 2025-2027" }
+      ],
+      "missing": [
+        { "sourceType": "ceo_cv", "impactedFields": ["section3.leadership"], "fallbackStrategy": "Để trống, ghi nhận thiếu", "severity": "minor" },
+        { "sourceType": "crm", "impactedFields": ["section5.customerInsight"], "fallbackStrategy": "Bỏ qua customer insight", "severity": "minor" }
+      ],
+      "qualityScore": 65,
+      "warnings": []
+    },
+    "allAssumptions": [
+      { "id": "dcf-tg", "field": "section9.dcf.terminalGrowth", "value": 0.03, "unit": "percent", "basis": "GDP growth VN long-term", "reason": "Conservative anchor", "emittedBy": "valuationDcf", "affectsSection": [9, 10, 11] }
+    ],
+    "comparablesUsed": [
+      { "ticker": "MWG", "name": "Mobile World", "country": "VN", "evEbitda": 12, "pe": 18, "pb": 3.2, "marketCap": null, "source": "seed" }
+    ],
+    "modelInputsTable": [
+      { "label": "WACC", "value": 0.13, "unit": "decimal", "source": "computed", "confidence": "medium", "note": "CAPM" },
+      { "label": "Terminal Growth", "value": 0.03, "unit": "decimal", "source": "assumed", "confidence": "high", "note": "Conservative" }
+    ],
+    "glossary": [
+      { "term": "DCF", "definition": "Discounted Cash Flow." }
+    ]
+  },
+  "section_risk": {
+    "risks": [
+      { "title": "Cạnh tranh giá", "category": "market", "severity": "high", "likelihood": "high", "description": "Đối thủ lớn giảm giá", "mitigation": "Tăng dịch vụ" }
+    ],
+    "overallRisk": "medium",
+    "narrative": "Rủi ro tổng thể ở mức trung bình.",
+    "emittedAssumptions": []
+  }
+}
