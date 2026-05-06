@@ -5,7 +5,7 @@ import { existsSync } from "node:fs";
 import { z } from "zod";
 import { prisma } from "@vp/db";
 import { CompanyMeta, newId } from "@vp/shared";
-import { getQueue } from "@vp/worker";
+import { getQueue } from "@/server/queue";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
