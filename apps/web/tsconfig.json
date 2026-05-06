@@ -8,6 +8,7 @@
     "noEmit": true,
     "incremental": true,
     "plugins": [{ "name": "next" }],
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       "@vp/shared": ["../../packages/shared/src"],
